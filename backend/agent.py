@@ -23,3 +23,8 @@ agent = Agent(
         "Break goals into realistic tasks with time and priority."
     ),
 )
+
+# 🔹 ADD THIS FUNCTION
+def generate_plan(goal: str) -> dict:
+    result = agent.run_sync(goal)
+    return result.model_dump()
